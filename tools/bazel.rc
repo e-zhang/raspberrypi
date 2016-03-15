@@ -1,0 +1,1 @@
+build --cpu=arm --host_cpu=arm --crosstool_top=//tools/cpp:toolchain
