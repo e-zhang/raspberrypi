@@ -18,16 +18,16 @@ filegroup(
 filegroup(
     name = "toolchain",
     srcs = [
-        ":cc-compiler-local",
+        ":cc-compiler-arm",
         ":empty",
     ],
 )
 
 cc_toolchain(
-    name = "cc-compiler-local",
+    name = "cc-compiler-arm",
     all_files = ":empty",
     compiler_files = ":empty",
-    cpu = "local",
+    cpu = "arm",
     dwp_files = ":empty",
     dynamic_runtime_libs = [":empty"],
     linker_files = ":empty",

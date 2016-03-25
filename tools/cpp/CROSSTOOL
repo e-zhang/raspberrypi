@@ -3,6 +3,11 @@ minor_version: ""
 default_target_cpu: "same_as_host"
 
 default_toolchain {
+  cpu: "darwin"
+  toolchain_identifier: "local_linux"
+}
+
+default_toolchain {
   cpu: "arm"
   toolchain_identifier: "local_linux"
 }
@@ -12,7 +17,7 @@ toolchain {
   abi_libc_version: "local"
   builtin_sysroot: ""
   compiler: "compiler"
-  host_system_name: "local"
+  host_system_name: "darwin"
   needsPic: true
   supports_gold_linker: false
   supports_incremental_linker: false
@@ -22,7 +27,7 @@ toolchain {
   supports_start_end_lib: false
   supports_thin_archives: false
   target_libc: "local"
-  target_cpu: "local"
+  target_cpu: "arm"
   target_system_name: "local"
   toolchain_identifier: "local_linux"
 

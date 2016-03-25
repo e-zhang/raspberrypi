@@ -1,1 +1,2 @@
-build --cpu=arm --host_cpu=arm --crosstool_top=//tools/cpp:toolchain
+build --cpu=arm --crosstool_top=//tools/cpp:toolchain
+build --linkopt '-Wl,-R$ORIGIN'
