@@ -31,35 +31,35 @@ toolchain {
   target_system_name: "local"
   toolchain_identifier: "local_linux"
 
-  tool_path { name: "ar" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-ar" }
-  tool_path { name: "compat-ld" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-ld" }
-  tool_path { name: "cpp" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-cpp" }
-  tool_path { name: "dwp" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-dwp" }
-  tool_path { name: "gcc" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-gcc" }
+  tool_path { name: "ar" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-ar" }
+  tool_path { name: "compat-ld" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-ld" }
+  tool_path { name: "cpp" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-cpp" }
+  tool_path { name: "dwp" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-dwp" }
+  tool_path { name: "gcc" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcc" }
   cxx_flag: "-std=c++0x"
   linker_flag: "-lstdc++"
-  linker_flag: "-B/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi/bin/"
+  linker_flag: "-B/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/bin/"
 
   # TODO(bazel-team): In theory, the path here ought to exactly match the path
   # used by gcc. That works because bazel currently doesn't track files at
   # absolute locations and has no remote execution, yet. However, this will need
   # to be fixed, maybe with auto-detection?
-  cxx_builtin_include_directory: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi/lib/gcc/"
-  cxx_builtin_include_directory: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/include"
-  cxx_builtin_include_directory: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot"
-  cxx_builtin_include_directory: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi/include"
-  tool_path { name: "gcov" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-gcov" }
+  cxx_builtin_include_directory: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/lib/gcc/"
+  cxx_builtin_include_directory: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/include"
+  cxx_builtin_include_directory: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/arm-unknown-linux-gnueabihf/sysroot"
+  cxx_builtin_include_directory: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/include"
+  tool_path { name: "gcov" path: "/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-gcov" }
 
   # C(++) compiles invoke the compiler (as that is the one knowing where
   # to find libraries), but we provide LD so other rules can invoke the linker.
-  tool_path { name: "ld" path: "/Volumes/rpi-cross/x-tools/bin/arm-unknown-linux-gnueabi-ld" }
+  tool_path { name: "ld" path: "/Volumes/rpi-cross/x-tools/bin/arm-unknown-linux-gnueabihf-ld" }
 
-  tool_path { name: "nm" path: "/Volumes/rpi-cross/x-tools/bin/arm-unknown-linux-gnueabi-nm" }
-  tool_path { name: "objcopy" path: "/Volumes/rpi-cross/x-tools/bin/arm-unknown-linux-gnueabi-objcopy" }
+  tool_path { name: "nm" path: "/Volumes/rpi-cross/x-tools/bin/arm-unknown-linux-gnueabihf-nm" }
+  tool_path { name: "objcopy" path: "/Volumes/rpi-cross/x-tools/bin/arm-unknown-linux-gnueabihf-objcopy" }
   objcopy_embed_flag: "-I"
   objcopy_embed_flag: "binary"
-  tool_path { name: "objdump" path: "/Volumes/rpi-cross/x-tools/bin/arm-unknown-linux-gnueabi-objdump" }
-  tool_path { name: "strip" path: "/Volumes/rpi-cross/x-tools/bin/arm-unknown-linux-gnueabi-strip" }
+  tool_path { name: "objdump" path: "/Volumes/rpi-cross/x-tools/bin/arm-unknown-linux-gnueabihf-objdump" }
+  tool_path { name: "strip" path: "/Volumes/rpi-cross/x-tools/bin/arm-unknown-linux-gnueabihf-strip" }
 
   # Anticipated future default.
   unfiltered_cxx_flag: "-no-canonical-prefixes"

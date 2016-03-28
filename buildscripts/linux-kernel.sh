@@ -13,7 +13,8 @@
 #   - firmware: 2a329e0 
 
 
-# crosstool-ng output is /Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabi
+# crosstool-ng output is /Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf
+CCPREFIX=/Volumes/rpi-cross/x-tools/arm-unknown-linux-gnueabihf/bin/arm-unknown-linux-gnueabihf-
 
 # copy config from rpi
 scp raspberrypi:/proc/config.gz .

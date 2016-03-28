@@ -1,6 +1,7 @@
 cc_library(
-    name = "opencv",
-    srcs = glob(["lib/*.so.3.1.0"]),
+    name = "liblept",
+    srcs = glob(["lib/*.so.4"]),
     hdrs = glob(["include/**/*.h*"]),
     visibility= ["//visibility:public"],
 )
+
